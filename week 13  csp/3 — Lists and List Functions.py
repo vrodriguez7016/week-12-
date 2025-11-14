@@ -72,10 +72,33 @@ print(my_list1)
 # .remove() - removes the first occurencen of a specific value
 # .sort() - sorts the list in ascending order
 # .reverse() - reverses the order of the list
+################################################
+# why is a list more useful than a variable?
+# A list can hold multiple values,
+# while a variable can hold one value at a time
+cakes = ['chocolate', 'vanilla', 'red velvet', 'carrot']
+print(cakes)
+# access the first item
+print(cakes[0]) # chocolate
+# access the last item
+print(cakes[-1]) # carrot
+# want to chocolate cake instead of vanilla
+cakes[0] = 'strawberry'
+print(cakes) # ['strawberry', 'vanilla', 'red velvet', 'carrot']
+# add a new cake to the end of the list
+cakes.append('lemon')
+print(cakes) # ['strawberry', 'chocolate', 'red velvet', 'carrot', 'lemon']
+#remove the last cake
+cakes.pop(0)
+print(cakes) # ['strawberry', 'chocolate', 'red velvet',
+# insert a new cake at index 2
+cakes.insert(2, 'funfetti')
+print(cakes) # ['strawberry', 'chocolate', 'funfetti',
+
 
 # # Examples:
 
-# my_list = ['apple', 'banana', 'cherry']
+my_list = ['apple', 'banana', 'cherry']
 # print(my_list[0])         # apple
 # print(my_list[1:])        # ['banana', 'cherry']
 
@@ -93,13 +116,46 @@ print(my_list1)
 # # Practice Problems:
 
 # # Create a list with 5 of your favorite foods.
-# foods = ["Pizza, pasta, salad, tortilla fish, salchipapas."]
+foods = ["Pizza, pasta, salad, tortilla fish, salchipapas"]
+print(foods)
 # # Print the second and last item.
-# print(foods[1:5])
+print(foods[1])
+print(foods[-1])
 # # Add a new item using .append().
-
+foods.append('hot dog')
+print(foods)
 # # Remove the first item using .pop(0).
-
+foods.pop(0)
+print(foods)
 # # Reverse your list using .reverse().
+foods.reverse()
+print(foods)
 
-# # Create a list of 3 lists (matrix), and access the middle element.
+# sets = {1, 2, 3}
+# sets are unordered collections of unique items
+# sets do not support indexing or slicing
+# sets are mutable, meaning you can add or remove items
+# sets are created using curly braces{}
+my_set = {1, 2, 3, 4, 5}
+print(my_set) # {1, 2, 3, 4, 5}
+print(type(my_set)) # <class 'set'>
+# add an item to the set
+my_set.add(6)
+print(my_set) # {1, 2, 3, 4, 5, 6}
+# remove an item from the set
+my_set.remove(3)
+print(my_set) # {1, 2, 4, 5, 6}
+
+# check if an item is in the set
+print(4 in my_set) # True
+print(3 in my_set) # False
+
+# tuples are ordered collections of tems
+# tuples are immutable, meaning you cannot modify them after creation
+# tuples are created using parentheses ()
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple) # (1, 2, 3, 4, 5)
+print(type(my_tuple)) # <class 'tuple'>
+print(my_tuple[0]) # 1
+print(my_tuple[1:4]) # (2, 3, 4)
+# try to modify the tuple (will raise an error)
